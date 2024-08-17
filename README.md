@@ -25,9 +25,15 @@ MarketingAI is an advanced AI-powered marketing assistant that helps businesses 
 3. Set up environment variables:
 Create a `.env` file in the root directory and add the following:
 ```
-DATABASE_URL=postgresql://username:password@localhost/dbname
+DATABASE_URL=postgresql://user:password@localhost:5432/marketingai
 SECRET_KEY=your_secret_key
 OPENAI_API_KEY=your_openai_api_key
+OPENAI_MODEL_NAME="gpt-4o-2024-08-06"
+```
+For SECRET_KEY, you can generate a random string using the following:
+```
+import secrets
+print(secrets.token_urlsafe(32))
 ```
 4. Start the database: `docker-compose up -d`
 
